@@ -1,22 +1,11 @@
 ﻿Console.Clear();
-Console.WriteLine("Нажмите Enter для вывода массива.");
-Console.ReadLine();
+Console.WriteLine("Введите число:");
+string number=Convert.ToString(Console.ReadLine());
 
-int[] array = new int[8];
-Random rnd=new Random();
+int sum=0;
 
+for(int i=0;i<number.Length;i++){
 
-for(int i=0;i<array.Length;i++){
-
-array[i]=rnd.Next(0,10);
-
-
-
-Console.Write(array[i]);
-if(i<array.Length-1){Console.Write(", ");}
-else {Console.Write(" -> ");}
-
+    sum=sum+Convert.ToInt32(number[i].ToString());
 }
-Console.Write($"[{array[0]}, {array[1]}, {array[2]}, {array[3]}, {array[4]}, {array[5]}, {array[6]}, {array[7]}]");
-
-
+Console.WriteLine($"{number} -> {sum}");
